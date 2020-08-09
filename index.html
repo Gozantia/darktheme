@@ -5,25 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
+  <title>Reto modo oscuro</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="light-theme.css" rel="stylesheet" id="theme-link">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
 
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
+
+  <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+  <h1>Hey there! This is just a title</h2>
+    <p>I am just a boring text, existing here solely for the purpose of this demo</p>
+    <p>And I am just another one like the one above me, because two is better than having only one</p>
+    <a href="#">I am a link, don't click me!</a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+
+
 
   Social Media Dashboard
   Total Followers: 23,004
@@ -96,6 +96,27 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script>
+    const theme = document.querySelector("#theme-link");
+     var checkbox = document.querySelector('input[name=theme]');
+      checkbox.addEventListener('change', function() {
+         if(this.checked) {
+              trans()
+            theme.href = "dark-theme.css";
+      } else {
+        trans()
+        theme.href = "light-theme.css";
+      }        
+    });
+          let trans = () => {
+          document.documentElement.classList.add('transition');
+          window.setTimeout(() => {
+              document.documentElement.classList.remove('transition')
+          }, 1000)
+      }
+  </script>
+  
 </body>
 
 </html>
