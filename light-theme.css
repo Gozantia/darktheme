@@ -80,6 +80,32 @@ label:active:after {
   padding-bottom: 20px;
 }
 
+/* @media query para tablet */
+
+@media (max-width: 1000px) and (min-width: 480px) {
+  body {
+    margin: 30px 80px;
+  }
+  hr {
+    visibility: hidden;
+  }
+}
+
+/* @media query para pc */
+
+@media (min-width: 1000px) {
+  body {
+    margin: 10px 8% 50px 8%;
+  }
+  #header {
+    display: flex;
+    flex-direction: row;
+  }
+  hr {
+    visibility: hidden;
+  }
+}
+
 /* desde aqui maquetado de la seccion followers */
 
 #section-followers {
@@ -102,7 +128,7 @@ label:active:after {
   border-radius: 10px;
 }
 .instagram {
-  border-top: 4px solid linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-top: 4px solid rgb(231, 61, 61);
   border-radius: 10px;
 }
 .youtube {
@@ -165,4 +191,24 @@ label:active:after {
   display: inline;
   align-items: center;
   justify-content: center;
+}
+
+/* media query para tablet */
+
+@media (max-width: 1000px) and (min-width: 480px) {
+  #section-followers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+/* media query para pc */
+
+@media (min-width: 1000px) {
+  #section-followers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
 }
