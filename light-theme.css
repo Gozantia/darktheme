@@ -1,60 +1,168 @@
 /* light-theme.css */
 
 body {
-    color: #222;
-    background: #fff;
-  }
-  
-  a {
-    color: #0033cc;
-  }
-  html.transition,
-  html.transition *,
-  html.transition *:before,
-  html.transition *:after {
-    transition: all 250ms !important;
-    transition-delay: 0 !important;
-  }
-  
-  input[type="checkbox"] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-  }
-  
-  label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 52px;
-    height: 27px;
-    background: grey;
-    float: right;
-    border-radius: 100px;
-    position: relative;
-  }
-  
-  label:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: #fff;
-    border-radius: 90px;
-    transition: 0.3s;
-  }
-  
-  input:checked + label {
-    background: var(--color-headings);
-  }
-  
-  input:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-  }
-  
-  label:active:after {
-    width: 45px;
-  }
-  
+  color: #222;
+  background: #fff;
+  padding: 13px 10px;
+  font-size: 14px;
+  font-family: Inter;
+}
+
+a {
+  color: #0033cc;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 250ms !important;
+  transition-delay: 0 !important;
+}
+
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: var(--color-headings);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+
+/* desde aqui maquetado del header */
+
+#header {
+  font-family: Inter;
+}
+#header .header-top {
+  line-height: 10px;
+  padding-bottom: 7px;
+}
+#header h1 {
+  font-size: 25px;
+}
+#header .header-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+/* desde aqui maquetado de la seccion followers */
+
+#section-followers {
+  display: flex;
+  flex-direction: column;
+}
+#section-followers a {
+  text-decoration: none;
+  background-color: hsl(227, 47%, 96%);
+  margin-top: 20px;
+}
+
+/* zona top de la seccion followers */
+.facebook {
+  border-top: 4px solid hsl(195, 100%, 50%);
+  border-radius: 10px;
+}
+.twitter {
+  border-top: 4px solid hsl(203, 89%, 53%);
+  border-radius: 10px;
+}
+.instagram {
+  border-top: 4px solid linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 10px;
+}
+.youtube {
+  border-top: 4px solid hsl(348, 97%, 39%);
+  border-radius: 10px;
+}
+.cont-top-follower {
+  padding-top: 20px;
+}
+
+#section-followers .cont-top-follower {
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#section-followers .cont-top-follower img {
+  display: inline-block;
+  width: 20px;
+  padding-right: 15px;
+}
+
+/* zona middle de la seccion followers */
+
+.cont-middle-follower {
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.cont-middle-follower .num {
+  font-size: 45px;
+  line-height: 1px;
+  margin-bottom: 3px;
+  padding-bottom: 10px;
+}
+
+/* zona bottom de la seccion followers */
+
+.cont-bottom-follower {
+  display: inline-block;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 15px;
+  color: rgb(7, 131, 73);
+}
+
+.cont-bottom-follower p {
+  display: inline;
+  font-size: 10px;
+  font-weight: bolder;
+}
+.cont-bottom-follower img {
+  display: inline;
+  align-items: center;
+  justify-content: center;
+}
