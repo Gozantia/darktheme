@@ -2,8 +2,10 @@
 
 body {
   color: #eee;
-  background: #121212;
+  background: #1c2029;
   font-family: 'Inter', sans-serif;
+  padding: 13px 10px;
+  font-size: 14px;
 }
 
 body a {
@@ -41,13 +43,13 @@ label:after {
   left: 3px;
   width: 20px;
   height: 20px;
-  background: #fff;
+  background: rgb(12, 11, 43);
   border-radius: 90px;
   transition: 0.3s;
 }
 
 input:checked + label {
-  background: #0285b3;
+  background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 input:checked + label:after {
@@ -77,6 +79,31 @@ label:active:after {
   align-items: center;
   padding-bottom: 20px;
 }
+/* @media query para tablet */
+
+@media (max-width: 1000px) and (min-width: 480px) {
+  body {
+    margin: 30px 80px;
+  }
+  hr {
+    visibility: hidden;
+  }
+}
+
+/* @media query para pc */
+
+@media (min-width: 1000px) {
+  body {
+    margin: 10px 8% 50px 8%;
+  }
+  #header {
+    display: flex;
+    flex-direction: row;
+  }
+  hr {
+    visibility: hidden;
+  }
+}
 
 /* desde aqui maquetado de la seccion followers */
 
@@ -86,7 +113,12 @@ label:active:after {
 }
 #section-followers a {
   text-decoration: none;
-  background-color: hsl(227, 47%, 96%);
+  background-color: hsl(228, 28%, 20%);
+  margin-top: 20px;
+}
+#section-followers a:hover {
+  text-decoration: none;
+  background-color:#333a56;
   margin-top: 20px;
 }
 
@@ -100,7 +132,7 @@ label:active:after {
   border-radius: 10px;
 }
 .instagram {
-  border-top: 4px solid linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-top: 4px solid rgb(231, 61, 61);
   border-radius: 10px;
 }
 .youtube {
@@ -117,7 +149,7 @@ label:active:after {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: hsl(0, 0%, 100%);
 }
 
 #section-followers .cont-top-follower img {
@@ -130,7 +162,7 @@ label:active:after {
 
 .cont-middle-follower {
   text-align: center;
-  color: black;
+  color: hsl(0, 0%, 100%);
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -191,7 +223,7 @@ a.cuadricula {
   color: rgb(255 255 255);
 }
 a.cuadricula:hover {
-  background: #1c2029;
+  background: #333a56;
 }
 h3.titulo {
   margin:0;
@@ -215,8 +247,14 @@ img.redes{
 }
 .iconos p{margin:0 0 0 6px;display:inline;}
 
-@media (max-width:1000px) and (min-width:480px)
-{
+/* media query para tablet */
+
+@media (max-width: 1000px) and (min-width: 480px) {
+  #section-followers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
   section.abajo {
     display: grid;
     grid-template-columns: auto auto;
@@ -224,11 +262,17 @@ img.redes{
   }
 }
 
-@media (min-width:1000px)
-{
+/* media query para pc */
+
+@media (min-width: 1000px) {
+  #section-followers {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
   section.abajo {
     display: grid;
-    grid-template-columns: auto auto auto auto; 
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 30px;
   }
 }
