@@ -3,6 +3,7 @@
 body {
   color: #eee;
   background: #121212;
+  font-family: 'Inter', sans-serif;
 }
 
 body a {
@@ -162,4 +163,72 @@ label:active:after {
   display: inline;
   align-items: center;
   justify-content: center;
+}
+
+h2 {
+  color: #666978;
+  font-size: 28px;
+  margin: 33px 0;
+}
+
+section.abajo {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 30px;
+}
+
+a.cuadricula {
+  background: #252b43;
+  display: grid;
+  padding: 35px 25px 12px;
+  grid-template-columns: 1.6fr 0.5fr;
+  grid-template-rows: 0.7fr 0fr;
+  gap: 1px 1px;
+  grid-template-areas:
+    "titulo redes"
+    "cifra iconos";
+  text-decoration: none;
+  color: rgb(255 255 255);
+}
+a.cuadricula:hover {
+  background: #1c2029;
+}
+h3.titulo {
+  margin:0;
+  color: #959dc1;
+  grid-area: titulo;
+}
+p.cifra{
+  margin: 0;
+  color: #ffffff;
+  font-size: 46px;
+  font-weight: 700;
+}
+img.redes{
+  grid-area: redes;
+  padding-left: 1rem;
+  justify-self: end;
+}
+.iconos {
+  grid-area: iconos;
+  justify-self: end;
+}
+.iconos p{margin:0 0 0 6px;display:inline;}
+
+@media (max-width:1000px) and (min-width:480px)
+{
+  section.abajo {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 30px;
+  }
+}
+
+@media (min-width:1000px)
+{
+  section.abajo {
+    display: grid;
+    grid-template-columns: auto auto auto auto; 
+    grid-gap: 30px;
+  }
 }
